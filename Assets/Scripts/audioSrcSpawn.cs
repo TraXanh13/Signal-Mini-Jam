@@ -40,13 +40,22 @@ public class audioSrcSpawn : MonoBehaviour
 
     void spawnObjectOnMouse() {
         Vector2 cursorSpot = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-
+        reduceOpacity();
         if(blocks.Count < maxBlocks){
             blocks.Add(Instantiate(prefab, cursorSpot, Quaternion.identity));
         } else {
             Destroy(blocks[0]);
             blocks.RemoveAt(0);
             blocks.Add(Instantiate(prefab, cursorSpot, Quaternion.identity));
+        }
+    }
+
+    void reduceOpacity() {
+        foreach (GameObject block in blocks)
+        {
+            Color color = block.GetComponent<SpriteRenderer>().color;
+            color.a = color.a * 0.5f;
+            block.GetComponent<SpriteRenderer>().color = color;
         }
     }
 }
