@@ -909,6 +909,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpHeight: 5
   moveSpeed: 3
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!114 &1106819119
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -952,7 +955,7 @@ GameObject:
   - component: {fileID: 1417102705}
   - component: {fileID: 1417102704}
   - component: {fileID: 1417102703}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Starting Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1400,7 +1403,7 @@ GameObject:
   - component: {fileID: 1869468236}
   - component: {fileID: 1869468235}
   - component: {fileID: 1869468237}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1511,7 +1514,7 @@ GameObject:
   - component: {fileID: 1954782823}
   - component: {fileID: 1954782822}
   - component: {fileID: 1954782821}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: End Goal
   m_TagString: Untagged
   m_Icon: {fileID: 0}

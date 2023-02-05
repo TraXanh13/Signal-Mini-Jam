@@ -11,9 +11,7 @@ public class checkPoint : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D other) {
-        print("triggered");
         if (other.CompareTag("Player")) {
-            print("triggered in if");
             gm.lastCheckPointPos = transform.position;
         }
     }
