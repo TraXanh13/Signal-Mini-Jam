@@ -31,7 +31,6 @@ public class targetIndicator : MonoBehaviour
     }
 
     void setChildrenActivity(bool active) {
-        print("setting children activity to " + active);
         foreach (Transform child in transform)
         {
             child.gameObject.SetActive(active);

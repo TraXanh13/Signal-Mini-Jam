@@ -34,7 +34,6 @@ public class audioSrcSpawn : MonoBehaviour
         {
             spawnObjectOnMouse();
             lastSpawnTime = 0f;
-            
         }
     }
 
