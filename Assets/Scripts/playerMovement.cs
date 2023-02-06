@@ -5,6 +5,7 @@ using UnityEngine;
 public class playerMovement : MonoBehaviour
 {
     private Rigidbody2D rb;
+    public Animator animator;
 
     [SerializeField] private float jumpHeight;
     [SerializeField] private float moveSpeed;
@@ -21,19 +22,43 @@ public class playerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Vector3 characterScale = transform.localScale;
+
         if((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W)) && isGrounded())
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpHeight);
+            animator.SetBool("isJumping", true);
         }
 
         if(Input.GetKey(KeyCode.D))
         {
+            characterScale.x = 0.65f;
             rb.velocity = new Vector2(moveSpeed, rb.velocity.y);
+            if(isGrounded())
+                animator.SetBool("isRunning", true);
         }
 
         if(Input.GetKey(KeyCode.A))
         {
+            characterScale.x = -0.65f;
             rb.velocity = new Vector2(-moveSpeed, rb.velocity.y);
+            if(isGrounded())
+                animator.SetBool("isRunning", true);
+        }
+
+        if(Input.GetKeyUp(KeyCode.D) || Input.GetKeyUp(KeyCode.A))
+        {   
+            rb.velocity = new Vector2(0, rb.velocity.y);
+            animator.SetBool("isRunning", false);
+        }
+
+        transform.localScale = characterScale;
+        
+        if(isGrounded())
+            animator.SetBool("isJumping", false);
+        else {
+            animator.SetBool("isJumping", true);
+            animator.SetBool("isRunning", false);
         }
     }
 
