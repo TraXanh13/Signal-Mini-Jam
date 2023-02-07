@@ -5,7 +5,7 @@ using UnityEngine;
 public class audioSrcSpawn : MonoBehaviour
 {
     public float spawnThreshold = 0.003f;
-    public int frequency = 128;
+    public int frequency = 60;
     public FFTWindow fftWindow;
     public GameObject prefab;
     public float debugValue;    

@@ -15,4 +15,6 @@ Move around using the arrow keys and jump with space. Platforms will spawn on th
 
 ## Credits
 
-The music was created by Rycon https://www.looperman.com/loops/detail/274837/drum-and-bass-free-80bpm-chill-out-drum-loop
+The music was created by ItsWatR on Pixabay https://pixabay.com/music/beats-watr-whipped-cream-10152/
+
+(Not Used rn) The music was created by Rycon https://www.looperman.com/loops/detail/274837/drum-and-bass-free-80bpm-chill-out-drum-loop

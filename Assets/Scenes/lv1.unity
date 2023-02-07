@@ -311,7 +311,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 5293f6c17258fd7478563e7bcb7d6298, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 463cb9aa576ab614d84c998cf985990f, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -926,12 +926,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a92f336de41b6a4ca669f89f3c0b032, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnThreshold: 0
-  frequency: 128
+  spawnThreshold: 0.009
+  frequency: 60
   fftWindow: 0
   prefab: {fileID: 5097037196629763137, guid: a3e329736856088438c3e75e59859e20, type: 3}
   debugValue: 0
-  delay: 0.5
+  delay: 0.2
   maxBlocks: 3
 --- !u!114 &1106819120
 MonoBehaviour:
