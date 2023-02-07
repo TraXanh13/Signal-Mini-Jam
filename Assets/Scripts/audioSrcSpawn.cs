@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class audioSrcSpawn : MonoBehaviour
 {
-    public float spawnThreshold = 0.01f;
-    public int frequency = 0;
+    public float spawnThreshold = 0.003f;
+    public int frequency = 128;
     public FFTWindow fftWindow;
     public GameObject prefab;
     public float debugValue;    
@@ -27,13 +27,20 @@ public class audioSrcSpawn : MonoBehaviour
     void Update()
     {
         lastSpawnTime += Time.deltaTime;
-        debugValue = samples[frequency];
         AudioListener.GetSpectrumData(samples, 0, fftWindow);
+        print("Delta Time: " + Time.deltaTime);
+        print("'Last Spawn Time: '" + lastSpawnTime);
+        print("'Delay: '" + delay);
+        print("'Samples: '" + samples[128]);
 
         if (lastSpawnTime > delay && samples[frequency] > spawnThreshold)
         {
             spawnObjectOnMouse();
             lastSpawnTime = 0f;
+        }
+
+        if(Input.GetMouseButtonDown(0)) {
+            spawnObjectOnMouse();
         }
     }
 
