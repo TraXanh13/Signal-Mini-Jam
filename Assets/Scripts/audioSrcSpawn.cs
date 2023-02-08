@@ -6,7 +6,7 @@ public class audioSrcSpawn : MonoBehaviour
 {
     public float spawnThreshold = 0.003f;
     public int frequency = 60;
-    public FFTWindow fftWindow;
+    public FFTWindow fftWindow = FFTWindow.BlackmanHarris;
     public GameObject prefab;
     public float debugValue;    
     public float delay = 0.5f;
